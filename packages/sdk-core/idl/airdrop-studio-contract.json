@@ -1,0 +1,4212 @@
+{
+  "address": "bonkAZceSmwJCcBXknvMjqdUSVJUjnj211w68d2VCei",
+  "metadata": {
+    "name": "airdrop_studio_contract",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Airdrop studio for bonkit.dev"
+  },
+  "instructions": [
+    {
+      "name": "append_onchain_recipients",
+      "discriminator": [
+        88,
+        187,
+        192,
+        252,
+        105,
+        199,
+        193,
+        33
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "list_root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "list_chunk",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  99,
+                  104,
+                  117,
+                  110,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_vault",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "AppendOnchainRecipientsParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cancel_merkle_airdrop",
+      "discriminator": [
+        208,
+        155,
+        251,
+        61,
+        70,
+        56,
+        14,
+        106
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cancel_onchain_airdrop",
+      "discriminator": [
+        180,
+        220,
+        146,
+        21,
+        119,
+        240,
+        183,
+        34
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "claim_merkle_tokens",
+      "discriminator": [
+        84,
+        58,
+        147,
+        32,
+        78,
+        173,
+        23,
+        246
+      ],
+      "accounts": [
+        {
+          "name": "airdrop",
+          "docs": [
+            "Airdrop round – must be `Approved`"
+          ],
+          "writable": true
+        },
+        {
+          "name": "claimer",
+          "docs": [
+            "Claimant"
+          ],
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving claim costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "claimer_ata",
+          "docs": [
+            "Claimant's ATA"
+          ],
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "docs": [
+            "Vault holding undistributed tokens"
+          ],
+          "writable": true
+        },
+        {
+          "name": "claim_status",
+          "docs": [
+            "Claim status PDA: prevents double-claim per leaf hash"
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  97,
+                  105,
+                  109,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  117,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              },
+              {
+                "kind": "arg",
+                "path": "params.leaf"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "ClaimMerkleParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "claim_onchain_tokens",
+      "discriminator": [
+        118,
+        57,
+        121,
+        11,
+        13,
+        43,
+        180,
+        105
+      ],
+      "accounts": [
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "list_root",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "list_chunk",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  99,
+                  104,
+                  117,
+                  110,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "claimer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving claim costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "claimer_ata",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "claim_status",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  108,
+                  97,
+                  105,
+                  109,
+                  45,
+                  115,
+                  116,
+                  97,
+                  116,
+                  117,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              },
+              {
+                "kind": "arg",
+                "path": "params.entry_index"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "ClaimOnchainParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_merkle_airdrop",
+      "discriminator": [
+        90,
+        140,
+        123,
+        107,
+        48,
+        144,
+        3,
+        37
+      ],
+      "accounts": [
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "draft_registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  114,
+                  97,
+                  102,
+                  116,
+                  45,
+                  114,
+                  101,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              }
+            ]
+          }
+        },
+        {
+          "name": "airdrop",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              },
+              {
+                "kind": "arg",
+                "path": "params.draft_index"
+              }
+            ]
+          }
+        },
+        {
+          "name": "draft_index",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  114,
+                  97,
+                  102,
+                  116,
+                  45,
+                  105,
+                  100,
+                  120
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              },
+              {
+                "kind": "arg",
+                "path": "params.draft_index"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "airdrop"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving creation costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "CreateMerkleAirdropParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_onchain_airdrop",
+      "discriminator": [
+        30,
+        165,
+        141,
+        73,
+        117,
+        1,
+        123,
+        246
+      ],
+      "accounts": [
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "draft_registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  114,
+                  97,
+                  102,
+                  116,
+                  45,
+                  114,
+                  101,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              }
+            ]
+          }
+        },
+        {
+          "name": "airdrop",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              },
+              {
+                "kind": "arg",
+                "path": "params.draft_index"
+              }
+            ]
+          }
+        },
+        {
+          "name": "draft_index",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  114,
+                  97,
+                  102,
+                  116,
+                  45,
+                  105,
+                  100,
+                  120
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "creator"
+              },
+              {
+                "kind": "arg",
+                "path": "params.draft_index"
+              }
+            ]
+          }
+        },
+        {
+          "name": "list_root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "list_chunk",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  99,
+                  104,
+                  117,
+                  110,
+                  107
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "path": "airdrop"
+              },
+              {
+                "kind": "account",
+                "path": "token_program"
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                140,
+                151,
+                37,
+                143,
+                78,
+                36,
+                137,
+                241,
+                187,
+                61,
+                16,
+                41,
+                20,
+                142,
+                13,
+                131,
+                11,
+                90,
+                19,
+                153,
+                218,
+                255,
+                16,
+                132,
+                4,
+                142,
+                123,
+                216,
+                219,
+                233,
+                248,
+                89
+              ]
+            }
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving creation costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "CreateOnchainAirdropParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "deposit_merkle_airdrop",
+      "discriminator": [
+        129,
+        9,
+        210,
+        176,
+        19,
+        33,
+        20,
+        148
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "payer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving deposit costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "deposit_onchain_airdrop",
+      "discriminator": [
+        194,
+        58,
+        250,
+        92,
+        1,
+        225,
+        91,
+        243
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "list_root",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "payer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving deposit costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_protocol_config",
+      "discriminator": [
+        28,
+        50,
+        43,
+        233,
+        244,
+        98,
+        123,
+        118
+      ],
+      "accounts": [
+        {
+          "name": "protocol_config",
+          "writable": true
+        },
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "InitProtocolConfigParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "initialize_studio_config",
+      "discriminator": [
+        167,
+        156,
+        148,
+        195,
+        148,
+        75,
+        152,
+        212
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "airdrop_program",
+          "address": "bonkAZceSmwJCcBXknvMjqdUSVJUjnj211w68d2VCei"
+        },
+        {
+          "name": "program_data"
+        },
+        {
+          "name": "config_authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "InitStudioConfigParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "register_merkle_root",
+      "discriminator": [
+        51,
+        45,
+        179,
+        28,
+        97,
+        205,
+        185,
+        134
+      ],
+      "accounts": [
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving register costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "RegisterMerkleRootParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "start_merkle_airdrop",
+      "discriminator": [
+        79,
+        91,
+        110,
+        101,
+        111,
+        34,
+        64,
+        221
+      ],
+      "accounts": [
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving start costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "StartMerkleAirdropParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "start_onchain_airdrop",
+      "discriminator": [
+        235,
+        97,
+        63,
+        215,
+        189,
+        18,
+        81,
+        175
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_config"
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "list_root",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  108,
+                  105,
+                  115,
+                  116,
+                  45,
+                  114,
+                  111,
+                  111,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "airdrop"
+              }
+            ]
+          }
+        },
+        {
+          "name": "protocol_vault",
+          "docs": [
+            "Protocol vault receiving start costs."
+          ],
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "StartOnchainAirdropParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "update_protocol_config",
+      "discriminator": [
+        197,
+        97,
+        123,
+        54,
+        221,
+        168,
+        11,
+        135
+      ],
+      "accounts": [
+        {
+          "name": "protocol_config",
+          "writable": true
+        },
+        {
+          "name": "studio_config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config_authority",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "studio_config"
+          ]
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "UpdateProtocolConfigParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "update_studio_config",
+      "discriminator": [
+        243,
+        146,
+        125,
+        172,
+        230,
+        187,
+        93,
+        123
+      ],
+      "accounts": [
+        {
+          "name": "config_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  105,
+                  114,
+                  100,
+                  114,
+                  111,
+                  112,
+                  45,
+                  115,
+                  116,
+                  117,
+                  100,
+                  105,
+                  111,
+                  45,
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "config_authority",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config_account"
+          ]
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "UpdateStudioConfigParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "withdraw_merkle_airdrop",
+      "discriminator": [
+        124,
+        134,
+        136,
+        135,
+        147,
+        213,
+        96,
+        207
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdraw_onchain_airdrop",
+      "discriminator": [
+        152,
+        147,
+        37,
+        215,
+        194,
+        239,
+        180,
+        102
+      ],
+      "accounts": [
+        {
+          "name": "creator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "airdrop",
+          "writable": true
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "memo_program",
+          "address": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "event_authority",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  95,
+                  95,
+                  101,
+                  118,
+                  101,
+                  110,
+                  116,
+                  95,
+                  97,
+                  117,
+                  116,
+                  104,
+                  111,
+                  114,
+                  105,
+                  116,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program"
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "AirdropProtocolConfig",
+      "discriminator": [
+        182,
+        140,
+        212,
+        121,
+        236,
+        112,
+        171,
+        99
+      ]
+    },
+    {
+      "name": "AirdropStudioConfig",
+      "discriminator": [
+        245,
+        76,
+        54,
+        47,
+        97,
+        125,
+        53,
+        141
+      ]
+    },
+    {
+      "name": "ClaimStatus",
+      "discriminator": [
+        22,
+        183,
+        249,
+        157,
+        247,
+        95,
+        150,
+        96
+      ]
+    },
+    {
+      "name": "DraftIndex",
+      "discriminator": [
+        210,
+        178,
+        236,
+        43,
+        98,
+        133,
+        119,
+        229
+      ]
+    },
+    {
+      "name": "DraftRegistry",
+      "discriminator": [
+        39,
+        95,
+        131,
+        182,
+        236,
+        194,
+        11,
+        133
+      ]
+    },
+    {
+      "name": "ListRoot",
+      "discriminator": [
+        245,
+        62,
+        57,
+        68,
+        97,
+        235,
+        172,
+        240
+      ]
+    },
+    {
+      "name": "MerkleProofAirdrop",
+      "discriminator": [
+        57,
+        83,
+        229,
+        57,
+        46,
+        186,
+        81,
+        103
+      ]
+    },
+    {
+      "name": "OnchainListAirdrop",
+      "discriminator": [
+        51,
+        172,
+        66,
+        52,
+        187,
+        222,
+        110,
+        7
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "AirdropCanceledEvent",
+      "discriminator": [
+        208,
+        168,
+        213,
+        213,
+        143,
+        189,
+        124,
+        74
+      ]
+    },
+    {
+      "name": "AirdropDraftCreatedEvent",
+      "discriminator": [
+        48,
+        179,
+        191,
+        138,
+        132,
+        224,
+        243,
+        244
+      ]
+    },
+    {
+      "name": "ClaimTokenEvent",
+      "discriminator": [
+        127,
+        10,
+        14,
+        49,
+        47,
+        171,
+        31,
+        127
+      ]
+    },
+    {
+      "name": "CreateConfigEvent",
+      "discriminator": [
+        107,
+        52,
+        89,
+        129,
+        55,
+        226,
+        81,
+        22
+      ]
+    },
+    {
+      "name": "CreateProtocolConfigEvent",
+      "discriminator": [
+        44,
+        74,
+        184,
+        0,
+        56,
+        102,
+        52,
+        171
+      ]
+    },
+    {
+      "name": "MerkleAirdropDepositedEvent",
+      "discriminator": [
+        102,
+        107,
+        60,
+        163,
+        118,
+        171,
+        57,
+        172
+      ]
+    },
+    {
+      "name": "MerkleAirdropStartedEvent",
+      "discriminator": [
+        251,
+        240,
+        64,
+        108,
+        102,
+        41,
+        135,
+        217
+      ]
+    },
+    {
+      "name": "MerkleAirdropWithdrawnEvent",
+      "discriminator": [
+        19,
+        241,
+        82,
+        184,
+        118,
+        253,
+        149,
+        98
+      ]
+    },
+    {
+      "name": "MerkleRootRegisteredEvent",
+      "discriminator": [
+        142,
+        111,
+        67,
+        50,
+        100,
+        45,
+        126,
+        44
+      ]
+    },
+    {
+      "name": "OnchainAirdropDepositedEvent",
+      "discriminator": [
+        54,
+        224,
+        243,
+        194,
+        29,
+        104,
+        84,
+        57
+      ]
+    },
+    {
+      "name": "OnchainAirdropStartedEvent",
+      "discriminator": [
+        219,
+        167,
+        202,
+        123,
+        151,
+        146,
+        78,
+        18
+      ]
+    },
+    {
+      "name": "OnchainAirdropWithdrawnEvent",
+      "discriminator": [
+        188,
+        82,
+        32,
+        127,
+        174,
+        255,
+        67,
+        192
+      ]
+    },
+    {
+      "name": "OnchainRecipientsAppendedEvent",
+      "discriminator": [
+        191,
+        140,
+        60,
+        224,
+        176,
+        199,
+        46,
+        39
+      ]
+    },
+    {
+      "name": "UpdateConfigEvent",
+      "discriminator": [
+        96,
+        112,
+        253,
+        102,
+        59,
+        78,
+        75,
+        134
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "AccountNotFound",
+      "msg": "Account not found"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidConfigAuthority",
+      "msg": "Invalid config authority"
+    },
+    {
+      "code": 6002,
+      "name": "AccountAlreadyInitialized",
+      "msg": "Account already initialized"
+    },
+    {
+      "code": 6003,
+      "name": "InvalidAirdropType",
+      "msg": "Invalid airdrop type"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidActionType",
+      "msg": "Invalid action type"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidPubkey",
+      "msg": "Invalid pubkey"
+    },
+    {
+      "code": 6006,
+      "name": "InvalidTimestamp",
+      "msg": "Invalid timestamp"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidAmount",
+      "msg": "Invalid Amount"
+    },
+    {
+      "code": 6008,
+      "name": "UriTooLong",
+      "msg": "Uri Too Long"
+    },
+    {
+      "code": 6009,
+      "name": "InvalidSourceAccount",
+      "msg": "Invalid source account"
+    },
+    {
+      "code": 6010,
+      "name": "AirdropNotStarted",
+      "msg": "Airdrop not started"
+    },
+    {
+      "code": 6011,
+      "name": "AirdropEnded",
+      "msg": "Airdrop ended"
+    },
+    {
+      "code": 6012,
+      "name": "AirdropNotEnded",
+      "msg": "Airdrop not ended"
+    },
+    {
+      "code": 6013,
+      "name": "AirdropHasNoEnd",
+      "msg": "Airdrop has no end"
+    },
+    {
+      "code": 6014,
+      "name": "InvalidState",
+      "msg": "Invalid state"
+    },
+    {
+      "code": 6015,
+      "name": "EndBeforeStart",
+      "msg": "End before start"
+    },
+    {
+      "code": 6016,
+      "name": "StartTimeInPast",
+      "msg": "Start time in past"
+    },
+    {
+      "code": 6017,
+      "name": "AlreadyClaimed",
+      "msg": "Already claimed"
+    },
+    {
+      "code": 6018,
+      "name": "InvalidMerkleProof",
+      "msg": "Invalid merkle proof"
+    },
+    {
+      "code": 6019,
+      "name": "MathOverflow",
+      "msg": "Math overflow"
+    },
+    {
+      "code": 6020,
+      "name": "InsufficientVaultBalance",
+      "msg": "Insufficient vault balance"
+    },
+    {
+      "code": 6021,
+      "name": "InsufficientFunds",
+      "msg": "Insufficient funds"
+    },
+    {
+      "code": 6022,
+      "name": "InvalidCostLamports",
+      "msg": "Creation cost exceeds the maximum allowed (1 SOL)."
+    },
+    {
+      "code": 6023,
+      "name": "UnsupportedMint",
+      "msg": "Unsupported mint"
+    },
+    {
+      "code": 6024,
+      "name": "MintFreezeAuthorityNotAllowed",
+      "msg": "Mint freeze authority is not allowed"
+    },
+    {
+      "code": 6025,
+      "name": "SourceCpiGuardEnabled",
+      "msg": "Source token account has CPI Guard enabled"
+    },
+    {
+      "code": 6026,
+      "name": "InvalidAirdropAccount",
+      "msg": "Invalid airdrop account"
+    },
+    {
+      "code": 6027,
+      "name": "MissingDraftRound",
+      "msg": "Missing draft round"
+    },
+    {
+      "code": 6028,
+      "name": "InvalidCreator",
+      "msg": "Invalid creator"
+    },
+    {
+      "code": 6029,
+      "name": "InvalidDraftRound",
+      "msg": "Invalid draft round"
+    },
+    {
+      "code": 6030,
+      "name": "InvalidMint",
+      "msg": "Invalid mint"
+    },
+    {
+      "code": 6031,
+      "name": "InvalidTokenProgram",
+      "msg": "Invalid token program"
+    },
+    {
+      "code": 6032,
+      "name": "InvalidMemoProgram",
+      "msg": "Invalid memo program"
+    },
+    {
+      "code": 6033,
+      "name": "Overflow",
+      "msg": "Overflow"
+    },
+    {
+      "code": 6034,
+      "name": "InvalidAirdropStatus",
+      "msg": "Invalid airdrop status"
+    },
+    {
+      "code": 6035,
+      "name": "InvalidProtocolVault",
+      "msg": "Invalid protocol vault"
+    },
+    {
+      "code": 6036,
+      "name": "InvalidAirdropDraftIndex",
+      "msg": "Invalid airdrop draft index"
+    },
+    {
+      "code": 6037,
+      "name": "InvalidPda",
+      "msg": "Invalid PDA"
+    },
+    {
+      "code": 6038,
+      "name": "InvalidLeafData",
+      "msg": "Invalid leaf data"
+    },
+    {
+      "code": 6039,
+      "name": "EmptyRecipientList",
+      "msg": "Empty recipient list"
+    },
+    {
+      "code": 6040,
+      "name": "AppendRecipientsLimitExceeded",
+      "msg": "Append recipients limit exceeded"
+    },
+    {
+      "code": 6041,
+      "name": "ListEmpty",
+      "msg": "List is empty"
+    },
+    {
+      "code": 6042,
+      "name": "ListChunkOverflow",
+      "msg": "List chunk overflow"
+    },
+    {
+      "code": 6043,
+      "name": "TransferFeeCalculationFailed",
+      "msg": "Transfer fee calculation failed"
+    },
+    {
+      "code": 6044,
+      "name": "EmptyMerkleRoots",
+      "msg": "Merkle roots list is empty"
+    },
+    {
+      "code": 6045,
+      "name": "MerkleRootsLimitExceeded",
+      "msg": "Merkle roots list exceeds the maximum length"
+    },
+    {
+      "code": 6046,
+      "name": "InvalidMerkleRoot",
+      "msg": "Invalid merkle root"
+    },
+    {
+      "code": 6047,
+      "name": "InvalidMerkleLeafCount",
+      "msg": "Invalid merkle leaf count"
+    },
+    {
+      "code": 6048,
+      "name": "MerkleLeafCountExceeded",
+      "msg": "Merkle leaf count exceeds the maximum allowed per root"
+    },
+    {
+      "code": 6049,
+      "name": "InvalidMerkleRootSum",
+      "msg": "Invalid merkle root sum"
+    },
+    {
+      "code": 6050,
+      "name": "DuplicateMerkleRoot",
+      "msg": "Duplicate merkle root"
+    },
+    {
+      "code": 6051,
+      "name": "MerkleRootsAlreadyRegistered",
+      "msg": "Merkle roots already registered"
+    },
+    {
+      "code": 6052,
+      "name": "MerkleRootSumTotalMismatch",
+      "msg": "Merkle root sum total mismatch"
+    },
+    {
+      "code": 6053,
+      "name": "AirdropDurationTooShort",
+      "msg": "Airdrop duration is too short"
+    }
+  ],
+  "types": [
+    {
+      "name": "AirdropAction",
+      "repr": {
+        "kind": "rust"
+      },
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "CreateOnchainAirdrop"
+          },
+          {
+            "name": "CreateMerkleAirdrop"
+          },
+          {
+            "name": "RegisterMerkleRoot"
+          },
+          {
+            "name": "DepositMerkleAirdrop"
+          },
+          {
+            "name": "StartMerkleAirdrop"
+          },
+          {
+            "name": "AppendOnchainRecipients"
+          },
+          {
+            "name": "DepositOnchainAirdrop"
+          },
+          {
+            "name": "StartOnchainAirdrop"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropBase",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "airdrop_index",
+            "type": "u32"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "airdrop_type",
+            "type": {
+              "defined": {
+                "name": "AirdropType"
+              }
+            }
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "claimed_amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          },
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "AirdropStatus"
+              }
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropCanceledEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "canceled_by",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropDraftCreatedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "airdrop_type",
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropProtocolConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "action",
+            "type": {
+              "defined": {
+                "name": "AirdropAction"
+              }
+            }
+          },
+          {
+            "name": "cost_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropStatus",
+      "repr": {
+        "kind": "rust"
+      },
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Draft"
+          },
+          {
+            "name": "Approved"
+          },
+          {
+            "name": "Deposited"
+          },
+          {
+            "name": "Canceled"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropStudioConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "config_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim_cost_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropType",
+      "repr": {
+        "kind": "rust"
+      },
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "OnChainList"
+          },
+          {
+            "name": "MerkleProof"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AppendOnchainRecipientsParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "recipients",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "RecipientInput"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimMerkleParams",
+      "docs": [
+        "Parameters supplied by claimer."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "root_index",
+            "type": "u8"
+          },
+          {
+            "name": "leaf_index",
+            "type": "u32"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "leaf",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "proof",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "MerkleProofNode"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimOnchainParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "entry_index",
+            "type": "u32"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimStatus",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "is_claimed",
+            "type": "bool"
+          },
+          {
+            "name": "claimed_at",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimTokenEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "claimer",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateConfigEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config_account",
+            "type": "string"
+          },
+          {
+            "name": "config_authority",
+            "type": "string"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateMerkleAirdropParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "draft_index",
+            "type": "u32"
+          },
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateOnchainAirdropParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "draft_index",
+            "type": "u32"
+          },
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CreateProtocolConfigEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "protocol_config_account",
+            "type": "string"
+          },
+          {
+            "name": "action_type",
+            "type": "string"
+          },
+          {
+            "name": "config_authority",
+            "type": "string"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DraftIndex",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "index",
+            "type": "u32"
+          },
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DraftRegistry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_count",
+            "type": "u32"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitProtocolConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": {
+              "defined": {
+                "name": "AirdropAction"
+              }
+            }
+          },
+          {
+            "name": "cost_lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitStudioConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "claim_cost_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_vault",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ListRoot",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "is_initialized",
+            "type": "bool"
+          },
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_count",
+            "type": "u32"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleAirdropDepositedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleAirdropStartedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "vault",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "merkle_root_hashes",
+            "type": {
+              "vec": "string"
+            }
+          },
+          {
+            "name": "merkle_root_leaf_counts",
+            "type": {
+              "vec": "u32"
+            }
+          },
+          {
+            "name": "merkle_root_sums",
+            "type": {
+              "vec": "u64"
+            }
+          },
+          {
+            "name": "uri",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "airdrop_type",
+            "type": {
+              "defined": {
+                "name": "AirdropType"
+              }
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleAirdropWithdrawnEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleProofAirdrop",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "base",
+            "type": {
+              "defined": {
+                "name": "AirdropBase"
+              }
+            }
+          },
+          {
+            "name": "merkle_roots",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "MerkleRootEntry"
+                }
+              }
+            }
+          },
+          {
+            "name": "merkle_tree_uri",
+            "type": {
+              "option": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleProofNode",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sibling_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "sibling_sum",
+            "type": "u64"
+          },
+          {
+            "name": "is_left",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleRootEntry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "leaf_count",
+            "type": "u32"
+          },
+          {
+            "name": "root_sum",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MerkleRootRegisteredEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "merkle_root_hashes",
+            "type": {
+              "vec": "string"
+            }
+          },
+          {
+            "name": "merkle_root_leaf_counts",
+            "type": {
+              "vec": "u32"
+            }
+          },
+          {
+            "name": "merkle_root_sums",
+            "type": {
+              "vec": "u64"
+            }
+          },
+          {
+            "name": "uri",
+            "type": {
+              "option": "string"
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OnchainAirdropDepositedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OnchainAirdropStartedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OnchainAirdropWithdrawnEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OnchainListAirdrop",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "base",
+            "type": {
+              "defined": {
+                "name": "AirdropBase"
+              }
+            }
+          },
+          {
+            "name": "list_root",
+            "type": "pubkey"
+          },
+          {
+            "name": "list_version",
+            "type": "u8"
+          },
+          {
+            "name": "total_recipients",
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OnchainRecipientsAppendedEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "airdrop",
+            "type": "pubkey"
+          },
+          {
+            "name": "list_root",
+            "type": "pubkey"
+          },
+          {
+            "name": "added_count",
+            "type": "u16"
+          },
+          {
+            "name": "total_count",
+            "type": "u32"
+          },
+          {
+            "name": "total_amount",
+            "type": "u64"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RecipientInput",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RegisterMerkleRootParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "merkle_roots",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "MerkleRootEntry"
+                }
+              }
+            }
+          },
+          {
+            "name": "uri",
+            "type": {
+              "option": "string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "StartMerkleAirdropParams",
+      "docs": [
+        "Parameters for merkle airdrop start."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "StartOnchainAirdropParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "starts_at",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "ends_at",
+            "type": {
+              "option": "u64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "UpdateConfigEvent",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "config_account",
+            "type": "string"
+          },
+          {
+            "name": "updated_by",
+            "type": "string"
+          },
+          {
+            "name": "created_at",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UpdateProtocolConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "action",
+            "type": {
+              "defined": {
+                "name": "AirdropAction"
+              }
+            }
+          },
+          {
+            "name": "cost_lamports",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UpdateStudioConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "new_config_authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "claim_cost_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "protocol_vault",
+            "type": "pubkey"
+          }
+        ]
+      }
+    }
+  ]
+}

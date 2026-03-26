@@ -1,0 +1,44 @@
+{
+  "name": "@bonkit/airdrop-sdk",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Public Airdrop Studio SDK.",
+  "keywords": [
+    "solana",
+    "anchor",
+    "airdrop",
+    "sdk",
+    "bonkit"
+  ],
+  "license": "MIT",
+  "author": "Bonkit-Dev",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bonkit-dev/airdrop-sdk.git"
+  },
+  "homepage": "https://github.com/bonkit-dev/airdrop-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/bonkit-dev/airdrop-sdk/issues"
+  },
+  "scripts": {
+    "sync-idl": "bash ../../scripts/sync-idl-public.sh",
+    "build": "tsup --config tsup.config.ts",
+    "clean": "shx rm -rf dist"
+  },
+  "peerDependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4"
+  }
+}

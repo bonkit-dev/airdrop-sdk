@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node"],
+    "typeRoots": ["../../node_modules/@types"],
+    "paths": {
+      "@/*": ["../sdk-core/src/*"],
+      "idl/*": ["../sdk-core/idl/*"]
+    }
+  },
+  "include": ["src", "idl", "../sdk-core/src", "../sdk-core/idl"]
+}
