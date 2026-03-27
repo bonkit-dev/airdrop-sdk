@@ -1,7 +1,7 @@
 {
   "name": "@bonkit/airdrop-sdk",
   "private": false,
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Public Airdrop Studio SDK.",
   "keywords": [
     "solana",
@@ -33,7 +33,9 @@
   },
   "scripts": {
     "sync-idl": "bash ../../scripts/sync-idl-public.sh",
+    "sync-readme": "bash ../../scripts/sync-public-readme.sh",
     "build": "tsup --config tsup.config.ts",
+    "prepack": "pnpm run sync-readme",
     "clean": "shx rm -rf dist"
   },
   "peerDependencies": {
