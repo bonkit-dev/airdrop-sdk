@@ -39,7 +39,7 @@ jobs:
 
       - name: Publish to npm
         working-directory: packages/sdk-public
-        run: npm publish --access public --provenance
+        run: npm publish --access public
 
       - name: Tag published release
         run: |
