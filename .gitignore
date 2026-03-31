@@ -3,3 +3,11 @@ dist/
 .pnpm-store/
 .npm/
 .DS_Store
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+pnpm-lock.yaml
