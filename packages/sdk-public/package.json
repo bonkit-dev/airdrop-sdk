@@ -33,9 +33,7 @@
   },
   "scripts": {
     "sync-idl": "bash ../../scripts/sync-idl-public.sh",
-    "sync-readme": "bash ../../scripts/sync-public-readme.sh",
     "build": "tsup --config tsup.config.ts",
-    "prepack": "pnpm run sync-readme",
     "clean": "shx rm -rf dist"
   },
   "peerDependencies": {
